@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<!-- Created by pdf2htmlEX (https://github.com/coolwanglu/pdf2htmlex) -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<meta name="generator" content="pdf2htmlEX"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<style type="text/css">
+/*! 
+ * Base CSS for pdf2htmlEX
+ * Copyright 2012,2013 Lu Wang <coolwanglu@gmail.com> 
+ * https://github.com/coolwanglu/pdf2htmlEX/blob/master/share/LICENSE
+ */#sidebar{position:absolute;top:0;left:0;bottom:0;width:250px;padding:0;margin:0;overflow:auto}#page-container{position:absolute;top:0;left:0;margin:0;padding:0;border:0}@media screen{#sidebar.opened+#page-container{left:250px}#page-container{bottom:0;right:0;overflow:auto}.loading-indicator{display:none}.loading-indicator.active{display:block;position:absolute;width:64px;height:64px;top:50%;left:50%;margin-top:-32px;margin-left:-32px}.loading-indicator img{position:absolute;top:0;left:0;bottom:0;right:0}}@media print{@page{margin:0}html{margin:0}body{margin:0;-webkit-print-color-adjust:exact}#sidebar{display:none}#page-container{width:auto;height:auto;overflow:visible;background-color:transparent}.d{display:none}}.pf{position:relative;background-color:white;overflow:hidden;margin:0;border:0}.pc{position:absolute;border:0;padding:0;margin:0;top:0;left:0;width:100%;height:100%;overflow:hidden;display:block;transform-origin:0 0;-ms-transform-origin:0 0;-webkit-transform-origin:0 0}.pc.opened{display:block}.bf{position:absolute;border:0;margin:0;top:0;bottom:0;width:100%;height:100%;-ms-user-select:none;-moz-user-select:none;-webkit-user-select:none;user-select:none}.bi{position:absolute;border:0;margin:0;-ms-user-select:none;-moz-user-select:none;-webkit-user-select:none;user-select:none}@media print{.pf{margin:0;box-shadow:none;page-break-after:always;page-break-inside:avoid}@-moz-document url-prefix(){.pf{overflow:visible;border:1px solid #fff}.pc{overflow:visible}}}.c{position:absolute;border:0;padding:0;margin:0;overflow:hidden;display:block}.t{position:absolute;white-space:pre;font-size:1px;transform-origin:0 100%;-ms-transform-origin:0 100%;-webkit-transform-origin:0 100%;unicode-bidi:bidi-override;-moz-font-feature-settings:"liga" 0}.t:after{content:''}.t:before{content:'';display:inline-block}.t span{position:relative;unicode-bidi:bidi-override}._{display:inline-block;color:transparent;z-index:-1}::selection{background:rgba(127,255,255,0.4)}::-moz-selection{background:rgba(127,255,255,0.4)}.pi{display:none}.d{position:absolute;transform-origin:0 100%;-ms-transform-origin:0 100%;-webkit-transform-origin:0 100%}.it{border:0;background-color:rgba(255,255,255,0.0)}.ir:hover{cursor:pointer}</style>
+<style type="text/css">
+/*! 
+ * Fancy styles for pdf2htmlEX
+ * Copyright 2012,2013 Lu Wang <coolwanglu@gmail.com> 
+ * https://github.com/coolwanglu/pdf2htmlEX/blob/master/share/LICENSE
+ */@keyframes fadein{from{opacity:0}to{opacity:1}}@-webkit-keyframes fadein{from{opacity:0}to{opacity:1}}@keyframes swing{0{transform:rotate(0)}10%{transform:rotate(0)}90%{transform:rotate(720deg)}100%{transform:rotate(720deg)}}@-webkit-keyframes swing{0{-webkit-transform:rotate(0)}10%{-webkit-transform:rotate(0)}90%{-webkit-transform:rotate(720deg)}100%{-webkit-transform:rotate(720deg)}}@media screen{#sidebar{background-color:#2f3236;background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjNDAzYzNmIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDBMNCA0Wk00IDBMMCA0WiIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2U9IiMxZTI5MmQiPjwvcGF0aD4KPC9zdmc+")}#outline{font-family:Georgia,Times,"Times New Roman",serif;font-size:13px;margin:2em 1em}#outline ul{padding:0}#outline li{list-style-type:none;margin:1em 0}#outline li>ul{margin-left:1em}#outline a,#outline a:visited,#outline a:hover,#outline a:active{line-height:1.2;color:#e8e8e8;text-overflow:ellipsis;white-space:nowrap;text-decoration:none;display:block;overflow:hidden;outline:0}#outline a:hover{color:#0cf}#page-container{background-color:#9e9e9e;background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjOWU5ZTllIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDVMNSAwWk02IDRMNCA2Wk0tMSAxTDEgLTFaIiBzdHJva2U9IiM4ODgiIHN0cm9rZS13aWR0aD0iMSI+PC9wYXRoPgo8L3N2Zz4=");-webkit-transition:left 500ms;transition:left 500ms}.pf{margin:13px auto;box-shadow:1px 1px 3px 1px #333;border-collapse:separate}.pc.opened{-webkit-animation:fadein 100ms;animation:fadein 100ms}.loading-indicator.active{-webkit-animation:swing 1.5s ease-in-out .01s infinite alternate none;animation:swing 1.5s ease-in-out .01s infinite alternate none}.checked{background:no-repeat url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goQDSYgDiGofgAAAslJREFUOMvtlM9LFGEYx7/vvOPM6ywuuyPFihWFBUsdNnA6KLIh+QPx4KWExULdHQ/9A9EfUodYmATDYg/iRewQzklFWxcEBcGgEplDkDtI6sw4PzrIbrOuedBb9MALD7zv+3m+z4/3Bf7bZS2bzQIAcrmcMDExcTeXy10DAFVVAQDksgFUVZ1ljD3yfd+0LOuFpmnvVVW9GHhkZAQcxwkNDQ2FSCQyRMgJxnVdy7KstKZpn7nwha6urqqfTqfPBAJAuVymlNLXoigOhfd5nmeiKL5TVTV+lmIKwAOA7u5u6Lped2BsbOwjY6yf4zgQQkAIAcedaPR9H67r3uYBQFEUFItFtLe332lpaVkUBOHK3t5eRtf1DwAwODiIubk5DA8PM8bYW1EU+wEgCIJqsCAIQAiB7/u253k2BQDDMJBKpa4mEon5eDx+UxAESJL0uK2t7XosFlvSdf0QAEmlUnlRFJ9Waho2Qghc1/U9z3uWz+eX+Wr+lL6SZfleEAQIggA8z6OpqSknimIvYyybSCReMsZ6TislhCAIAti2Dc/zejVNWwCAavN8339j27YbTg0AGGM3WltbP4WhlRWq6Q/btrs1TVsYHx+vNgqKoqBUKn2NRqPFxsbGJzzP05puUlpt0ukyOI6z7zjOwNTU1OLo6CgmJyf/gA3DgKIoWF1d/cIY24/FYgOU0pp0z/Ityzo8Pj5OTk9PbwHA+vp6zWghDC+VSiuRSOQgGo32UErJ38CO42wdHR09LBQK3zKZDDY2NupmFmF4R0cHVlZWlmRZ/iVJUn9FeWWcCCE4ODjYtG27Z2Zm5juAOmgdGAB2d3cBADs7O8uSJN2SZfl+WKlpmpumaT6Yn58vn/fs6XmbhmHMNjc3tzDGFI7jYJrm5vb29sDa2trPC/9aiqJUy5pOp4f6+vqeJ5PJBAB0dnZe/t8NBajx/z37Df5OGX8d13xzAAAAAElFTkSuQmCC)}}</style>
+<style type="text/css">
+.ff0{font-family:sans-serif;visibility:hidden;}
+@font-face{font-family:ff1;src:url(f1.woff)format("woff");}.ff1{font-family:ff1;line-height:0.910645;font-style:normal;font-weight:normal;visibility:visible;}
+@font-face{font-family:ff2;src:url(f2.woff)format("woff");}.ff2{font-family:ff2;line-height:0.937500;font-style:normal;font-weight:normal;visibility:visible;}
+@font-face{font-family:ff3;src:url(f3.woff)format("woff");}.ff3{font-family:ff3;line-height:0.925781;font-style:normal;font-weight:normal;visibility:visible;}
+@font-face{font-family:ff4;src:url(f4.woff)format("woff");}.ff4{font-family:ff4;line-height:0.925781;font-style:normal;font-weight:normal;visibility:visible;}
+@font-face{font-family:ff5;src:url(f5.woff)format("woff");}.ff5{font-family:ff5;line-height:0.967773;font-style:normal;font-weight:normal;visibility:visible;}
+@font-face{font-family:ff6;src:url(f6.woff)format("woff");}.ff6{font-family:ff6;line-height:0.967773;font-style:normal;font-weight:normal;visibility:visible;}
+@font-face{font-family:ff7;src:url(f7.woff)format("woff");}.ff7{font-family:ff7;line-height:0.952148;font-style:normal;font-weight:normal;visibility:visible;}
+@font-face{font-family:ff8;src:url(f8.woff)format("woff");}.ff8{font-family:ff8;line-height:0.740234;font-style:normal;font-weight:normal;visibility:visible;}
+@font-face{font-family:ff9;src:url(f9.woff)format("woff");}.ff9{font-family:ff9;line-height:0.921875;font-style:normal;font-weight:normal;visibility:visible;}
+@font-face{font-family:ffa;src:url(fa.woff)format("woff");}.ffa{font-family:ffa;line-height:0.876953;font-style:normal;font-weight:normal;visibility:visible;}
+.m0{transform:matrix(0.250000,0.000000,0.000000,0.250000,0,0);-ms-transform:matrix(0.250000,0.000000,0.000000,0.250000,0,0);-webkit-transform:matrix(0.250000,0.000000,0.000000,0.250000,0,0);}
+.m1{transform:none;-ms-transform:none;-webkit-transform:none;}
+.v0{vertical-align:0.000000px;}
+.ls0{letter-spacing:0.000000px;}
+.sc_{text-shadow:none;}
+.sc0{text-shadow:-0.015em 0 transparent,0 0.015em transparent,0.015em 0 transparent,0 -0.015em  transparent;}
+@media screen and (-webkit-min-device-pixel-ratio:0){
+.sc_{-webkit-text-stroke:0px transparent;}
+.sc0{-webkit-text-stroke:0.015em transparent;text-shadow:none;}
+}
+.ws0{word-spacing:0.000000px;}
+._d{margin-left:-7.308000px;}
+._11{margin-left:-6.288000px;}
+._e{margin-left:-4.998000px;}
+._c{margin-left:-3.780000px;}
+._12{margin-left:-1.776000px;}
+._a{width:1.200012px;}
+._b{width:10.794000px;}
+._10{width:12.246000px;}
+._4{width:14.400000px;}
+._2{width:16.000000px;}
+._1{width:18.000000px;}
+._f{width:20.706000px;}
+._6{width:28.864000px;}
+._7{width:43.200000px;}
+._5{width:57.600000px;}
+._3{width:86.400000px;}
+._8{width:172.800000px;}
+._9{width:201.600000px;}
+._0{width:558.000000px;}
+.fc4{color:rgb(156,220,254);}
+.fc5{color:rgb(206,145,120);}
+.fc0{color:rgb(0,0,0);}
+.fc1{color:rgb(128,128,128);}
+.fc2{color:rgb(86,156,214);}
+.fc3{color:rgb(212,212,212);}
+.fs0{font-size:36.000000px;}
+.fs4{font-size:40.000000px;}
+.fs3{font-size:42.000000px;}
+.fs6{font-size:48.000000px;}
+.fs7{font-size:56.000000px;}
+.fs2{font-size:64.000000px;}
+.fs5{font-size:88.000000px;}
+.fs1{font-size:112.000000px;}
+.y4{bottom:11.016031px;}
+.y2{bottom:13.205001px;}
+.y3{bottom:49.099913px;}
+.y52{bottom:77.000000px;}
+.y59{bottom:79.500000px;}
+.y2f{bottom:84.734042px;}
+.y4e{bottom:90.500000px;}
+.y3a{bottom:93.535007px;}
+.y2e{bottom:109.568027px;}
+.y4a{bottom:111.892001px;}
+.y30{bottom:114.000000px;}
+.y39{bottom:118.588007px;}
+.y4d{bottom:123.000000px;}
+.y3b{bottom:130.000000px;}
+.y2d{bottom:134.402011px;}
+.y47{bottom:140.500000px;}
+.y57{bottom:141.500000px;}
+.y38{bottom:144.369052px;}
+.y5b{bottom:147.365049px;}
+.y0{bottom:156.500000px;}
+.y2c{bottom:159.235995px;}
+.yc{bottom:161.288029px;}
+.y37{bottom:169.203036px;}
+.y51{bottom:169.404041px;}
+.y5c{bottom:177.000000px;}
+.y2b{bottom:184.070041px;}
+.y36{bottom:194.037021px;}
+.y54{bottom:200.000000px;}
+.yb{bottom:208.288029px;}
+.y2a{bottom:208.904025px;}
+.y3f{bottom:220.692050px;}
+.y35{bottom:237.758017px;}
+.y29{bottom:252.625021px;}
+.ya{bottom:255.288029px;}
+.y46{bottom:273.500000px;}
+.y28{bottom:296.677035px;}
+.y42{bottom:301.960025px;}
+.y9{bottom:302.288029px;}
+.y27{bottom:321.511020px;}
+.y40{bottom:324.500000px;}
+.y64{bottom:335.134016px;}
+.y26{bottom:346.345035px;}
+.y8{bottom:349.288029px;}
+.y63{bottom:351.968016px;}
+.y43{bottom:367.000000px;}
+.y25{bottom:371.179019px;}
+.y62{bottom:376.802017px;}
+.y15{bottom:388.325017px;}
+.y61{bottom:393.636017px;}
+.y24{bottom:396.013034px;}
+.y7{bottom:396.288029px;}
+.y49{bottom:409.926028px;}
+.y50{bottom:410.160036px;}
+.y60{bottom:410.470015px;}
+.y14{bottom:413.159032px;}
+.y23{bottom:420.847018px;}
+.y56{bottom:421.809019px;}
+.y34{bottom:427.131033px;}
+.y5f{bottom:427.304014px;}
+.y3e{bottom:434.360019px;}
+.y13{bottom:437.993016px;}
+.y22{bottom:445.681033px;}
+.y53{bottom:449.777027px;}
+.y4f{bottom:462.342031px;}
+.y12{bottom:462.827031px;}
+.y21{bottom:470.515018px;}
+.y5e{bottom:471.576010px;}
+.y11{bottom:487.661016px;}
+.y6{bottom:491.055029px;}
+.y20{bottom:495.349032px;}
+.y3d{bottom:498.394015px;}
+.y4c{bottom:509.288028px;}
+.y10{bottom:512.495030px;}
+.y4b{bottom:513.000000px;}
+.y1f{bottom:520.183017px;}
+.y3c{bottom:523.228030px;}
+.yf{bottom:537.329030px;}
+.y41{bottom:537.594028px;}
+.y5d{bottom:541.000000px;}
+.ye{bottom:551.404021px;}
+.y45{bottom:558.956027px;}
+.y58{bottom:567.477018px;}
+.y1e{bottom:569.851031px;}
+.y44{bottom:583.790027px;}
+.y1d{bottom:594.685032px;}
+.y5a{bottom:605.043028px;}
+.y1c{bottom:611.519032px;}
+.y33{bottom:620.187030px;}
+.y1b{bottom:628.353030px;}
+.y1a{bottom:653.187027px;}
+.y32{bottom:663.908026px;}
+.y19{bottom:670.021027px;}
+.y5{bottom:686.551025px;}
+.y18{bottom:686.855026px;}
+.y55{bottom:694.499025px;}
+.y17{bottom:703.689025px;}
+.y48{bottom:707.960025px;}
+.y16{bottom:747.410025px;}
+.y31{bottom:757.628024px;}
+.y1{bottom:777.004024px;}
+.yd{bottom:785.000000px;}
+.h9{height:1.000000px;}
+.h4{height:19.668032px;}
+.h2{height:22.346001px;}
+.h5{height:25.013672px;}
+.h3{height:29.812500px;}
+.hb{height:31.601562px;}
+.h18{height:31.953125px;}
+.ha{height:34.781250px;}
+.he{height:36.750000px;}
+.h1b{height:38.343750px;}
+.h1e{height:39.750000px;}
+.h17{height:44.734375px;}
+.h8{height:51.093750px;}
+.h7{height:52.500000px;}
+.hc{height:70.253906px;}
+.h6{height:91.875000px;}
+.h20{height:245.000000px;}
+.h14{height:273.000000px;}
+.h11{height:419.000000px;}
+.h10{height:461.500000px;}
+.h12{height:512.500000px;}
+.h1a{height:586.000000px;}
+.h1f{height:609.000000px;}
+.h1{height:629.500000px;}
+.h1c{height:644.500000px;}
+.h13{height:645.500000px;}
+.hf{height:656.000000px;}
+.h15{height:663.000000px;}
+.hd{height:672.000000px;}
+.h16{height:695.500000px;}
+.h1d{height:706.500000px;}
+.h19{height:709.000000px;}
+.h0{height:841.900024px;}
+.w2{width:5.000000px;}
+.w3{width:9.500000px;}
+.w1{width:418.500000px;}
+.w0{width:595.299988px;}
+.x1{left:0.000000px;}
+.x0{left:88.500000px;}
+.x2{left:90.000000px;}
+.x8{left:111.000000px;}
+.x6{left:126.750000px;}
+.x4{left:199.650002px;}
+.x5{left:225.649994px;}
+.x7{left:287.149994px;}
+.x9{left:292.899994px;}
+.x3{left:295.149994px;}
+@media print{
+.v0{vertical-align:0.000000pt;}
+.ls0{letter-spacing:0.000000pt;}
+.ws0{word-spacing:0.000000pt;}
+._d{margin-left:-9.744000pt;}
+._11{margin-left:-8.384000pt;}
+._e{margin-left:-6.664000pt;}
+._c{margin-left:-5.040000pt;}
+._12{margin-left:-2.368000pt;}
+._a{width:1.600016pt;}
+._b{width:14.392000pt;}
+._10{width:16.328000pt;}
+._4{width:19.200000pt;}
+._2{width:21.333333pt;}
+._1{width:24.000000pt;}
+._f{width:27.608000pt;}
+._6{width:38.485333pt;}
+._7{width:57.600000pt;}
+._5{width:76.800000pt;}
+._3{width:115.200000pt;}
+._8{width:230.400000pt;}
+._9{width:268.800000pt;}
+._0{width:744.000000pt;}
+.fs0{font-size:48.000000pt;}
+.fs4{font-size:53.333333pt;}
+.fs3{font-size:56.000000pt;}
+.fs6{font-size:64.000000pt;}
+.fs7{font-size:74.666667pt;}
+.fs2{font-size:85.333333pt;}
+.fs5{font-size:117.333333pt;}
+.fs1{font-size:149.333333pt;}
+.y4{bottom:14.688042pt;}
+.y2{bottom:17.606668pt;}
+.y3{bottom:65.466550pt;}
+.y52{bottom:102.666667pt;}
+.y59{bottom:106.000000pt;}
+.y2f{bottom:112.978723pt;}
+.y4e{bottom:120.666667pt;}
+.y3a{bottom:124.713342pt;}
+.y2e{bottom:146.090702pt;}
+.y4a{bottom:149.189335pt;}
+.y30{bottom:152.000000pt;}
+.y39{bottom:158.117343pt;}
+.y4d{bottom:164.000000pt;}
+.y3b{bottom:173.333333pt;}
+.y2d{bottom:179.202681pt;}
+.y47{bottom:187.333333pt;}
+.y57{bottom:188.666667pt;}
+.y38{bottom:192.492069pt;}
+.y5b{bottom:196.486732pt;}
+.y0{bottom:208.666667pt;}
+.y2c{bottom:212.314660pt;}
+.yc{bottom:215.050705pt;}
+.y37{bottom:225.604048pt;}
+.y51{bottom:225.872055pt;}
+.y5c{bottom:236.000000pt;}
+.y2b{bottom:245.426721pt;}
+.y36{bottom:258.716028pt;}
+.y54{bottom:266.666667pt;}
+.yb{bottom:277.717372pt;}
+.y2a{bottom:278.538700pt;}
+.y3f{bottom:294.256067pt;}
+.y35{bottom:317.010689pt;}
+.y29{bottom:336.833361pt;}
+.ya{bottom:340.384038pt;}
+.y46{bottom:364.666667pt;}
+.y28{bottom:395.569380pt;}
+.y42{bottom:402.613366pt;}
+.y9{bottom:403.050705pt;}
+.y27{bottom:428.681360pt;}
+.y40{bottom:432.666667pt;}
+.y64{bottom:446.845355pt;}
+.y26{bottom:461.793379pt;}
+.y8{bottom:465.717372pt;}
+.y63{bottom:469.290688pt;}
+.y43{bottom:489.333333pt;}
+.y25{bottom:494.905359pt;}
+.y62{bottom:502.402690pt;}
+.y15{bottom:517.766689pt;}
+.y61{bottom:524.848022pt;}
+.y24{bottom:528.017378pt;}
+.y7{bottom:528.384038pt;}
+.y49{bottom:546.568038pt;}
+.y50{bottom:546.880048pt;}
+.y60{bottom:547.293353pt;}
+.y14{bottom:550.878709pt;}
+.y23{bottom:561.129358pt;}
+.y56{bottom:562.412025pt;}
+.y34{bottom:569.508044pt;}
+.y5f{bottom:569.738686pt;}
+.y3e{bottom:579.146692pt;}
+.y13{bottom:583.990688pt;}
+.y22{bottom:594.241378pt;}
+.y53{bottom:599.702703pt;}
+.y4f{bottom:616.456042pt;}
+.y12{bottom:617.102708pt;}
+.y21{bottom:627.353357pt;}
+.y5e{bottom:628.768013pt;}
+.y11{bottom:650.214687pt;}
+.y6{bottom:654.740039pt;}
+.y20{bottom:660.465377pt;}
+.y3d{bottom:664.525354pt;}
+.y4c{bottom:679.050704pt;}
+.y10{bottom:683.326707pt;}
+.y4b{bottom:684.000000pt;}
+.y1f{bottom:693.577356pt;}
+.y3c{bottom:697.637374pt;}
+.yf{bottom:716.438707pt;}
+.y41{bottom:716.792037pt;}
+.y5d{bottom:721.333333pt;}
+.ye{bottom:735.205362pt;}
+.y45{bottom:745.274703pt;}
+.y58{bottom:756.636024pt;}
+.y1e{bottom:759.801375pt;}
+.y44{bottom:778.386702pt;}
+.y1d{bottom:792.913376pt;}
+.y5a{bottom:806.724037pt;}
+.y1c{bottom:815.358709pt;}
+.y33{bottom:826.916040pt;}
+.y1b{bottom:837.804040pt;}
+.y1a{bottom:870.916036pt;}
+.y32{bottom:885.210701pt;}
+.y19{bottom:893.361369pt;}
+.y5{bottom:915.401367pt;}
+.y18{bottom:915.806702pt;}
+.y55{bottom:925.998700pt;}
+.y17{bottom:938.252033pt;}
+.y48{bottom:943.946700pt;}
+.y16{bottom:996.546700pt;}
+.y31{bottom:1010.170699pt;}
+.y1{bottom:1036.005366pt;}
+.yd{bottom:1046.666667pt;}
+.h9{height:1.333333pt;}
+.h4{height:26.224042pt;}
+.h2{height:29.794668pt;}
+.h5{height:33.351562pt;}
+.h3{height:39.750000pt;}
+.hb{height:42.135417pt;}
+.h18{height:42.604167pt;}
+.ha{height:46.375000pt;}
+.he{height:49.000000pt;}
+.h1b{height:51.125000pt;}
+.h1e{height:53.000000pt;}
+.h17{height:59.645833pt;}
+.h8{height:68.125000pt;}
+.h7{height:70.000000pt;}
+.hc{height:93.671875pt;}
+.h6{height:122.500000pt;}
+.h20{height:326.666667pt;}
+.h14{height:364.000000pt;}
+.h11{height:558.666667pt;}
+.h10{height:615.333333pt;}
+.h12{height:683.333333pt;}
+.h1a{height:781.333333pt;}
+.h1f{height:812.000000pt;}
+.h1{height:839.333333pt;}
+.h1c{height:859.333333pt;}
+.h13{height:860.666667pt;}
+.hf{height:874.666667pt;}
+.h15{height:884.000000pt;}
+.hd{height:896.000000pt;}
+.h16{height:927.333333pt;}
+.h1d{height:942.000000pt;}
+.h19{height:945.333333pt;}
+.h0{height:1122.533366pt;}
+.w2{width:6.666667pt;}
+.w3{width:12.666667pt;}
+.w1{width:558.000000pt;}
+.w0{width:793.733317pt;}
+.x1{left:0.000000pt;}
+.x0{left:118.000000pt;}
+.x2{left:120.000000pt;}
+.x8{left:148.000000pt;}
+.x6{left:169.000000pt;}
+.x4{left:266.200002pt;}
+.x5{left:300.866659pt;}
+.x7{left:382.866659pt;}
+.x9{left:390.533325pt;}
+.x3{left:393.533325pt;}
+}
+</style>
+<script src="compatibility.min.js"></script>
+<script src="pdf2htmlEX.min.js"></script>
+<script>
+try{
+pdf2htmlEX.defaultViewer = new pdf2htmlEX.Viewer({});
+}catch(e){}
+</script>
+<title></title>
+</head>
+<body>
+<div id="sidebar">
+<div id="outline">
+</div>
+</div>
+<div id="page-container">
+<div id="pf1" class="pf w0 h0" data-page-no="1"><div class="pc pc1 w0 h0"><img class="bi x0 y0 w1 h1" alt="" src="bg1.png"/><div class="c x1 y1 w0 h2"><div class="t m0 x2 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0">                                                              <span class="_ _0"> </span><span class="ff2">实验一</span>  <span class="_ _1"> </span>Web <span class="ff2">网站设计</span>  <span class="ff2">实验报告</span></div></div><div class="c x3 y3 w2 h4"><div class="t m0 x1 h5 y4 ff1 fs0 fc0 sc0 ls0 ws0">1</div></div><div class="t m0 x4 h6 y5 ff3 fs1 fc0 sc0 ls0 ws0">实<span class="ff4">  </span>验<span class="ff4">  </span>报<span class="ff4">  </span>告</div><div class="t m0 x5 h7 y6 ff3 fs2 fc0 sc0 ls0 ws0">实验一<span class="_ _2"> </span><span class="ff4">Web<span class="_ _2"> </span></span>网站设计</div><div class="t m0 x6 h8 y7 ff5 fs2 fc0 sc0 ls0 ws0">学生姓名<span class="ff6">      <span class="_ _3"> </span></span>罗宇涛<span class="ff6">      <span class="_ _3"> </span></span>学号<span class="ff6"> <span class="_ _4"> </span> <span class="_ _4"> </span>206001829    </span></div><div class="t m0 x6 h8 y8 ff5 fs2 fc0 sc0 ls0 ws0">课程名称<span class="ff6">      <span class="_ _3"> </span>Web<span class="_ _2"> </span></span>前端开发技术<span class="ff6">              </span></div><div class="t m0 x6 h8 y9 ff5 fs2 fc0 sc0 ls0 ws0">实验学期<span class="ff6">    <span class="_ _5"> </span>2021 <span class="_ _4"> </span></span>至<span class="ff6">  <span class="_ _6"> </span>2022    <span class="_ _5"> </span></span>学年<span class="ff6"> <span class="_ _4"> </span></span>第<span class="ff6">   <span class="_ _7"> </span>2  <span class="_ _6"> </span></span>学期</div><div class="t m0 x6 h8 ya ff5 fs2 fc0 sc0 ls0 ws0">所在学院<span class="ff6">            <span class="_ _8"> </span></span>信息学院<span class="ff6">                       </span></div><div class="t m0 x6 h8 yb ff5 fs2 fc0 sc0 ls0 ws0">任课教师<span class="ff6">              <span class="_ _9"> </span></span>潘善亮<span class="ff6">                </span></div><div class="t m0 x6 h8 yc ff5 fs2 fc0 sc0 ls0 ws0">实验成绩<span class="ff6">                                    </span></div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf2" class="pf w0 h0" data-page-no="2"><div class="pc pc2 w0 h0"><img class="bi x0 yd w1 h9" alt="" src="bg2.png"/><div class="c x1 y1 w0 h2"><div class="t m0 x2 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0">                                                              <span class="_ _0"> </span><span class="ff2">实验一</span>  <span class="_ _1"> </span>Web <span class="ff2">网站设计</span>  <span class="ff2">实验报告</span></div></div><div class="c x3 y3 w2 h4"><div class="t m0 x1 h5 y4 ff1 fs0 fc0 sc0 ls0 ws0">2</div></div><div class="t m0 x7 ha ye ff2 fs3 fc0 sc0 ls0 ws0">目录</div><div class="t m0 x2 hb yf ff7 fs4 fc0 sc0 ls0 ws0">一、<span class="ff1">  </span>设计任务、要求<span class="_ _a"></span><span class="ff1">..............................................................................................................................3</span></div><div class="t m0 x2 hb y10 ff7 fs4 fc0 sc0 ls0 ws0">二、方案设计<span class="_ _a"></span><span class="ff1">............................................................................................................................................3</span></div><div class="t m0 x2 hb y11 ff7 fs4 fc0 sc0 ls0 ws0">三、<span class="ff1">  </span>课题分析、设计指导思想<span class="_ _a"></span><span class="ff1">..............................................................................................................3</span></div><div class="t m0 x2 hb y12 ff7 fs4 fc0 sc0 ls0 ws0">四、<span class="ff1">  </span>网站结构图，可加文字说明<span class="_ _a"></span><span class="ff1">..........................................................................................................3</span></div><div class="t m0 x2 hb y13 ff7 fs4 fc0 sc0 ls0 ws0">五、<span class="ff1">  </span>网站设计的详细配置<span class="_ _a"></span><span class="ff1">......................................................................................................................4</span></div><div class="t m0 x2 hb y14 ff7 fs4 fc0 sc0 ls0 ws0">六、<span class="ff1">  </span>网站的链接、验证说明<span class="_ _a"></span><span class="ff1">................................................................................................................11</span></div><div class="t m0 x2 hb y15 ff7 fs4 fc0 sc0 ls0 ws0">七、收获、体会、意见和建议<span class="_ _a"></span><span class="ff1">..............................................................................................................17</span></div><a class="l" href="#pf3" data-dest-detail='[3,"XYZ",90,769,null]'><div class="d m1" style="border-style:none;position:absolute;left:90.000000px;bottom:532.270020px;width:95.000000px;height:13.545044px;background-color:rgba(255,255,255,0.000001);"></div></a><a class="l" href="#pf3" data-dest-detail='[3,"XYZ",90,769,null]'><div class="d m1" style="border-style:none;position:absolute;left:185.000000px;bottom:532.270020px;width:315.299988px;height:13.545044px;background-color:rgba(255,255,255,0.000001);"></div></a><a class="l" href="#pf3" data-dest-detail='[3,"XYZ",90,769,null]'><div class="d m1" style="border-style:none;position:absolute;left:500.299988px;bottom:532.270020px;width:5.000000px;height:13.545044px;background-color:rgba(255,255,255,0.000001);"></div></a><a class="l" href="#pf3" data-dest-detail='[3,"XYZ",90,284,null]'><div class="d m1" style="border-style:none;position:absolute;left:90.000000px;bottom:507.436005px;width:60.000000px;height:13.545013px;background-color:rgba(255,255,255,0.000001);"></div></a><a class="l" href="#pf3" data-dest-detail='[3,"XYZ",90,284,null]'><div class="d m1" style="border-style:none;position:absolute;left:150.000000px;bottom:507.436005px;width:350.299988px;height:13.545013px;background-color:rgba(255,255,255,0.000001);"></div></a><a class="l" href="#pf3" data-dest-detail='[3,"XYZ",90,284,null]'><div class="d m1" style="border-style:none;position:absolute;left:500.299988px;bottom:507.436005px;width:5.000000px;height:13.545013px;background-color:rgba(255,255,255,0.000001);"></div></a><a class="l" href="#pf4" data-dest-detail='[4,"XYZ",90,695,null]'><div class="d m1" style="border-style:none;position:absolute;left:90.000000px;bottom:482.602020px;width:135.000000px;height:13.544983px;background-color:rgba(255,255,255,0.000001);"></div></a><a class="l" href="#pf4" data-dest-detail='[4,"XYZ",90,695,null]'><div class="d m1" style="border-style:none;position:absolute;left:225.000000px;bottom:482.602020px;width:275.299988px;height:13.544983px;background-color:rgba(255,255,255,0.000001);"></div></a><a class="l" href="#pf4" data-dest-detail='[4,"XYZ",90,695,null]'><div class="d m1" style="border-style:none;position:absolute;left:500.299988px;bottom:482.602020px;width:5.000000px;height:13.544983px;background-color:rgba(255,255,255,0.000001);"></div></a><a class="l" href="#pf4" data-dest-detail='[4,"XYZ",90,458,null]'><div class="d m1" style="border-style:none;position:absolute;left:90.000000px;bottom:457.768036px;width:145.000000px;height:13.544983px;background-color:rgba(255,255,255,0.000001);"></div></a><a class="l" href="#pf4" data-dest-detail='[4,"XYZ",90,458,null]'><div class="d m1" style="border-style:none;position:absolute;left:235.000000px;bottom:457.768036px;width:265.299988px;height:13.544983px;background-color:rgba(255,255,255,0.000001);"></div></a><a class="l" href="#pf4" data-dest-detail='[4,"XYZ",90,458,null]'><div class="d m1" style="border-style:none;position:absolute;left:500.299988px;bottom:457.768036px;width:5.000000px;height:13.544983px;background-color:rgba(255,255,255,0.000001);"></div></a><a class="l" href="#pf4" data-dest-detail='[4,"XYZ",90,269,null]'><div class="d m1" style="border-style:none;position:absolute;left:90.000000px;bottom:432.934021px;width:115.000000px;height:13.544983px;background-color:rgba(255,255,255,0.000001);"></div></a><a class="l" href="#pf4" data-dest-detail='[4,"XYZ",90,269,null]'><div class="d m1" style="border-style:none;position:absolute;left:205.000000px;bottom:432.934021px;width:295.299988px;height:13.544983px;background-color:rgba(255,255,255,0.000001);"></div></a><a class="l" href="#pf4" data-dest-detail='[4,"XYZ",90,269,null]'><div class="d m1" style="border-style:none;position:absolute;left:500.299988px;bottom:432.934021px;width:5.000000px;height:13.544983px;background-color:rgba(255,255,255,0.000001);"></div></a><a class="l" href="#pfe" data-dest-detail='[14,"XYZ",90,493,null]'><div class="d m1" style="border-style:none;position:absolute;left:90.000000px;bottom:408.100037px;width:125.000000px;height:13.544983px;background-color:rgba(255,255,255,0.000001);"></div></a><a class="l" href="#pfe" data-dest-detail='[14,"XYZ",90,493,null]'><div class="d m1" style="border-style:none;position:absolute;left:215.000000px;bottom:408.100037px;width:280.299988px;height:13.544983px;background-color:rgba(255,255,255,0.000001);"></div></a><a class="l" href="#pfe" data-dest-detail='[14,"XYZ",90,493,null]'><div class="d m1" style="border-style:none;position:absolute;left:495.299988px;bottom:408.100037px;width:10.000000px;height:13.544983px;background-color:rgba(255,255,255,0.000001);"></div></a><a class="l" href="#pf14" data-dest-detail='[20,"XYZ",90,503,null]'><div class="d m1" style="border-style:none;position:absolute;left:90.000000px;bottom:383.266022px;width:130.000000px;height:13.544983px;background-color:rgba(255,255,255,0.000001);"></div></a><a class="l" href="#pf14" data-dest-detail='[20,"XYZ",90,503,null]'><div class="d m1" style="border-style:none;position:absolute;left:220.000000px;bottom:383.266022px;width:275.299988px;height:13.544983px;background-color:rgba(255,255,255,0.000001);"></div></a><a class="l" href="#pf14" data-dest-detail='[20,"XYZ",90,503,null]'><div class="d m1" style="border-style:none;position:absolute;left:495.299988px;bottom:383.266022px;width:10.000000px;height:13.544983px;background-color:rgba(255,255,255,0.000001);"></div></a></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf3" class="pf w0 h0" data-page-no="3"><div class="pc pc3 w0 h0"><img class="bi x0 yd w1 h9" alt="" src="bg3.png"/><div class="c x1 y1 w0 h2"><div class="t m0 x2 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0">                                                              <span class="_ _0"> </span><span class="ff2">实验一</span>  <span class="_ _1"> </span>Web <span class="ff2">网站设计</span>  <span class="ff2">实验报告</span></div></div><div class="c x3 y3 w2 h4"><div class="t m0 x1 h5 y4 ff1 fs0 fc0 sc0 ls0 ws0">3</div></div><div class="t m0 x2 hc y16 ff5 fs5 fc0 sc0 ls0 ws0">一、设计任务、要求</div><div class="t m0 x8 ha y17 ff2 fs3 fc0 sc0 ls0 ws0">用<span class="_ _b"> </span><span class="ff1">PhotoShop</span>、<span class="ff1">DreamWeaver</span>、<span class="_ _a"></span><span class="ff1">VS Code </span>等开<span class="_ _a"></span>发工具<span class="_ _a"></span>制作一个<span class="_ _a"></span>由静态网<span class="_ _a"></span>页构成的<span class="_ _a"></span>简单网</div><div class="t m0 x2 ha y18 ff2 fs3 fc0 sc0 ls0 ws0">站、<span class="_ _c"></span>要求包含一个首页、<span class="_ _c"></span>五个子页及以上，<span class="_ _c"></span>按照网站开发流程，<span class="_ _c"></span>先做网页效果图，<span class="_ _c"></span>然后制作</div><div class="t m0 x2 ha y19 ff2 fs3 fc0 sc0 ls0 ws0">网页素材、<span class="_ _c"></span>构建网站文件结构、<span class="_ _c"></span>规划网页布局、<span class="_ _c"></span>制作网页动画、<span class="_ _c"></span>实现网页功能，<span class="_ _c"></span>然后进行网</div><div class="t m0 x2 ha y1a ff2 fs3 fc0 sc0 ls0 ws0">站测试。</div><div class="t m0 x8 ha y1b ff2 fs3 fc0 sc0 ls0 ws0">功能要求<span class="_ _d"></span>：<span class="_ _d"></span>各页面应用<span class="_ _b"> </span><span class="ff1">CSS+DIV </span>网页布局，使用<span class="_ _b"> </span><span class="ff1">CSS </span>样式使风格统一、页面之间通过</div><div class="t m0 x2 ha y1c ff2 fs3 fc0 sc0 ls0 ws0">超链接切换。<span class="_ _e"></span>该网站首页必须包括系统时间显示并动态更新、<span class="_ _e"></span>网站<span class="_ _b"> </span><span class="ff1">logo</span>、<span class="_ _e"></span>导航条<span class="_ _e"></span>（带有鼠标</div><div class="t m0 x2 ha y1d ff2 fs3 fc0 sc0 ls0 ws0">事件变化效果）、<span class="ff1">banner</span>（简单<span class="_ _b"> </span><span class="ff1">flash </span>动画）、图片、多媒体运用、文字等主要信息展示。</div><div class="t m0 x2 ha y1e ff2 fs3 fc0 sc0 ls0 ws0">为了发挥大家制作主页的积极性和发挥大家的个人创意，网站主题不限。</div><div class="t m0 x2 ha y1f ff2 fs3 fc0 sc0 ls0 ws0">实验报告内容包括：</div><div class="t m0 x2 ha y20 ff1 fs3 fc0 sc0 ls0 ws0">1.<span class="ff2">封面</span></div><div class="t m0 x2 ha y21 ff1 fs3 fc0 sc0 ls0 ws0">2<span class="ff2">、目录（含页码）</span></div><div class="t m0 x2 ha y22 ff1 fs3 fc0 sc0 ls0 ws0">3<span class="ff2">、设计任务、要求</span></div><div class="t m0 x2 ha y23 ff1 fs3 fc0 sc0 ls0 ws0">4<span class="ff2">、方案设计</span></div><div class="t m0 x2 ha y24 ff1 fs3 fc0 sc0 ls0 ws0">5<span class="ff2">、课题分析、设计指导思想；</span></div><div class="t m0 x2 ha y25 ff1 fs3 fc0 sc0 ls0 ws0">6<span class="ff2">、网站结构图，可加文字说明；</span></div><div class="t m0 x2 ha y26 ff1 fs3 fc0 sc0 ls0 ws0">7<span class="ff2">、网站设计的详细配置；</span></div><div class="t m0 x2 ha y27 ff1 fs3 fc0 sc0 ls0 ws0">8<span class="ff2">、网站的链接、验证说明</span></div><div class="t m0 x2 ha y28 ff1 fs3 fc0 sc0 ls0 ws0">9<span class="ff2">、收获、体会、意见和建议</span></div><div class="t m0 x2 hc y29 ff5 fs5 fc0 sc0 ls0 ws0">二、方案设计</div><div class="t m0 x8 ha y2a ff2 fs3 fc0 sc0 ls0 ws0">设计一个购物网站，借鉴已有类似的购物网站，进行网页布局。</div><div class="t m0 x8 ha y2b ff2 fs3 fc0 sc0 ls0 ws0">首页展示主题和分类导航，宣传图，即一些商品的简介。</div><div class="t m0 x8 ha y2c ff2 fs3 fc0 sc0 ls0 ws0">登陆页<span class="ff1">  </span>有登陆表单，输入账号密码等。</div><div class="t m0 x8 ha y2d ff2 fs3 fc0 sc0 ls0 ws0">注册页<span class="ff1">  </span>注册表单，注册相关信息</div><div class="t m0 x8 ha y2e ff2 fs3 fc0 sc0 ls0 ws0">购物车<span class="ff1">  </span>放置了已经购买的商品，展示</div><div class="t m0 x8 ha y2f ff2 fs3 fc0 sc0 ls0 ws0">动漫中心<span class="ff1">  </span>文字图像展示大量的相关信息。</div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf4" class="pf w0 h0" data-page-no="4"><div class="pc pc4 w0 h0"><img class="bi x0 y30 w1 hd" alt="" src="bg4.png"/><div class="c x1 y1 w0 h2"><div class="t m0 x2 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0">                                                              <span class="_ _0"> </span><span class="ff2">实验一</span>  <span class="_ _1"> </span>Web <span class="ff2">网站设计</span>  <span class="ff2">实验报告</span></div></div><div class="c x3 y3 w2 h4"><div class="t m0 x1 h5 y4 ff1 fs0 fc0 sc0 ls0 ws0">4</div></div><div class="t m0 x8 ha y31 ff2 fs3 fc0 sc0 ls0 ws0">关于我们<span class="ff1">  </span>展示购物网站相关信息</div><div class="t m0 x2 hc y32 ff5 fs5 fc0 sc0 ls0 ws0">三、课题分析、设计指导思想</div><div class="t m0 x2 ha y33 ff2 fs3 fc0 sc0 ls0 ws0">学会熟练运用<span class="_ _b"> </span><span class="ff1">html </span>和<span class="_ _b"> </span><span class="ff1">css </span>进行网页的实战制作。熟悉网站开发流程。能够自主设计网页。</div><div class="t m0 x2 hc y34 ff5 fs5 fc0 sc0 ls0 ws0">四、网站结构图，可加文字说明</div><div class="t m0 x2 hc y35 ff5 fs5 fc0 sc0 ls0 ws0">五、网站设计的详细配置</div><div class="t m0 x2 ha y36 ff2 fs3 fc0 sc0 ls0 ws0">对应功能要求实现：</div><div class="t m0 x2 ha y37 ff1 fs3 fc0 sc0 ls0 ws0">1.<span class="ff2">页面之间通过超链接切换：</span>a  <span class="ff2">标签</span></div><div class="t m0 x2 ha y38 ff2 fs3 fc0 sc0 ls0 ws0">例：</div><div class="t m0 x2 he y39 ff8 fs6 fc1 sc0 ls0 ws0">&lt;<span class="fc2">a<span class="fc3"> <span class="fc4">href</span>=<span class="fc5">&quot;./index.html&quot;</span></span></span>&gt;<span class="ff9 fc3">首页</span>&lt;/<span class="fc2">a</span>&gt;</div><div class="t m0 x2 ha y3a ff2 fs3 fc0 sc0 ls0 ws0">导航栏</div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf5" class="pf w0 h0" data-page-no="5"><div class="pc pc5 w0 h0"><img class="bi x0 y3b w1 hf" alt="" src="bg5.png"/><div class="c x1 y1 w0 h2"><div class="t m0 x2 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0">                                                              <span class="_ _0"> </span><span class="ff2">实验一</span>  <span class="_ _1"> </span>Web <span class="ff2">网站设计</span>  <span class="ff2">实验报告</span></div></div><div class="c x3 y3 w2 h4"><div class="t m0 x1 h5 y4 ff1 fs0 fc0 sc0 ls0 ws0">5</div></div><div class="t m0 x2 ha y3c ff1 fs3 fc0 sc0 ls0 ws0">2.<span class="ff2">首页必须包括系统时间显示并动态更新：</span></div><div class="t m0 x2 ha y3d ff2 fs3 fc0 sc0 ls0 ws0">放在了底部栏，每秒更新一次</div><div class="t m0 x2 ha y3e ff2 fs3 fc0 sc0 ls0 ws0">引用时间管理插件<span class="_ _b"> </span><span class="ff1">jquery  </span>时间模拟器插件，调用函数</div><div class="t m0 x2 ha y3f ff1 fs3 fc0 sc0 ls0 ws0">3.<span class="ff2">网站<span class="_ _b"> </span></span>logo  <span class="_ _f"> </span><span class="ff2">和<span class="_ _b"> </span></span>ico <span class="ff2">图标</span></div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf6" class="pf w0 h0" data-page-no="6"><div class="pc pc6 w0 h0"><img class="bi x0 y40 w1 h10" alt="" src="bg6.png"/><div class="c x1 y1 w0 h2"><div class="t m0 x2 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0">                                                              <span class="_ _0"> </span><span class="ff2">实验一</span>  <span class="_ _1"> </span>Web <span class="ff2">网站设计</span>  <span class="ff2">实验报告</span></div></div><div class="c x3 y3 w2 h4"><div class="t m0 x1 h5 y4 ff1 fs0 fc0 sc0 ls0 ws0">6</div></div><div class="t m0 x2 ha y41 ff1 fs3 fc0 sc0 ls0 ws0">4.<span class="ff2">导航条（带有鼠标事件变化效果）</span></div><div class="t m0 x2 ha y42 ff1 fs3 fc0 sc0 ls0 ws0">5.banner<span class="ff2">（简单<span class="_ _b"> </span></span>flash <span class="ff2">动画）</span></div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf7" class="pf w0 h0" data-page-no="7"><div class="pc pc7 w0 h0"><img class="bi x0 y43 w1 h11" alt="" src="bg7.png"/><div class="c x1 y1 w0 h2"><div class="t m0 x2 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0">                                                              <span class="_ _0"> </span><span class="ff2">实验一</span>  <span class="_ _1"> </span>Web <span class="ff2">网站设计</span>  <span class="ff2">实验报告</span></div></div><div class="c x3 y3 w2 h4"><div class="t m0 x1 h5 y4 ff1 fs0 fc0 sc0 ls0 ws0">7</div></div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf8" class="pf w0 h0" data-page-no="8"><div class="pc pc8 w0 h0"><img class="bi x0 yd w1 h9" alt="" src="bg8.png"/><div class="c x1 y1 w0 h2"><div class="t m0 x2 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0">                                                              <span class="_ _0"> </span><span class="ff2">实验一</span>  <span class="_ _1"> </span>Web <span class="ff2">网站设计</span>  <span class="ff2">实验报告</span></div></div><div class="c x3 y3 w2 h4"><div class="t m0 x1 h5 y4 ff1 fs0 fc0 sc0 ls0 ws0">8</div></div><div class="t m0 x2 ha y44 ff1 fs3 fc0 sc0 ls0 ws0">6.<span class="ff2">图片、多媒体运用、文字等主要信息展示。</span></div><div class="t m0 x2 ha y45 ff2 fs3 fc0 sc0 ls0 ws0">首页</div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf9" class="pf w0 h0" data-page-no="9"><div class="pc pc9 w0 h0"><img class="bi x0 y46 w1 h12" alt="" src="bg9.png"/><div class="c x1 y1 w0 h2"><div class="t m0 x2 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0">                                                              <span class="_ _0"> </span><span class="ff2">实验一</span>  <span class="_ _1"> </span>Web <span class="ff2">网站设计</span>  <span class="ff2">实验报告</span></div></div><div class="c x3 y3 w2 h4"><div class="t m0 x1 h5 y4 ff1 fs0 fc0 sc0 ls0 ws0">9</div></div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pfa" class="pf w0 h0" data-page-no="a"><div class="pc pca w0 h0"><img class="bi x0 y47 w1 h13" alt="" src="bga.png"/><div class="c x1 y1 w0 h2"><div class="t m0 x2 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0">                                                              <span class="_ _0"> </span><span class="ff2">实验一</span>  <span class="_ _1"> </span>Web <span class="ff2">网站设计</span>  <span class="ff2">实验报告</span></div></div><div class="c x9 y3 w3 h4"><div class="t m0 x1 h5 y4 ff1 fs0 fc0 sc0 ls0 ws0">10</div></div><div class="t m0 x2 ha y48 ff2 fs3 fc0 sc0 ls0 ws0">登陆页</div><div class="t m0 x2 ha y49 ff2 fs3 fc0 sc0 ls0 ws0">注册页</div><div class="t m0 x2 ha y4a ff2 fs3 fc0 sc0 ls0 ws0">购物车</div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pfb" class="pf w0 h0" data-page-no="b"><div class="pc pcb w0 h0"><img class="bi x0 y4b w1 h14" alt="" src="bgb.png"/><div class="c x1 y1 w0 h2"><div class="t m0 x2 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0">                                                              <span class="_ _0"> </span><span class="ff2">实验一</span>  <span class="_ _1"> </span>Web <span class="ff2">网站设计</span>  <span class="ff2">实验报告</span></div></div><div class="c x9 y3 w3 h4"><div class="t m0 x1 h5 y4 ff1 fs0 fc0 sc0 ls0 ws0">11</div></div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pfc" class="pf w0 h0" data-page-no="c"><div class="pc pcc w0 h0"><img class="bi x0 yd w1 h9" alt="" src="bgc.png"/><div class="c x1 y1 w0 h2"><div class="t m0 x2 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0">                                                              <span class="_ _0"> </span><span class="ff2">实验一</span>  <span class="_ _1"> </span>Web <span class="ff2">网站设计</span>  <span class="ff2">实验报告</span></div></div><div class="c x9 y3 w3 h4"><div class="t m0 x1 h5 y4 ff1 fs0 fc0 sc0 ls0 ws0">12</div></div><div class="t m0 x2 ha y4c ff2 fs3 fc0 sc0 ls0 ws0">动漫中心</div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pfd" class="pf w0 h0" data-page-no="d"><div class="pc pcd w0 h0"><img class="bi x0 y4d w1 h15" alt="" src="bgd.png"/><div class="c x1 y1 w0 h2"><div class="t m0 x2 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0">                                                              <span class="_ _0"> </span><span class="ff2">实验一</span>  <span class="_ _1"> </span>Web <span class="ff2">网站设计</span>  <span class="ff2">实验报告</span></div></div><div class="c x9 y3 w3 h4"><div class="t m0 x1 h5 y4 ff1 fs0 fc0 sc0 ls0 ws0">13</div></div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pfe" class="pf w0 h0" data-page-no="e"><div class="pc pce w0 h0"><img class="bi x0 y4e w1 h16" alt="" src="bge.png"/><div class="c x1 y1 w0 h2"><div class="t m0 x2 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0">                                                              <span class="_ _0"> </span><span class="ff2">实验一</span>  <span class="_ _1"> </span>Web <span class="ff2">网站设计</span>  <span class="ff2">实验报告</span></div></div><div class="c x9 y3 w3 h4"><div class="t m0 x1 h5 y4 ff1 fs0 fc0 sc0 ls0 ws0">14</div></div><div class="t m0 x2 ha y31 ff2 fs3 fc0 sc0 ls0 ws0">关于我们</div><div class="t m0 x2 hc y4f ff5 fs5 fc0 sc0 ls0 ws0">六、网站的链接、验证说明</div><div class="t m0 x2 h17 y50 ff1 fs7 fc0 sc0 ls0 ws0">1.<span class="ff9">导<span class="ffa">航</span>栏<span class="ffa">的</span>网<span class="ffa">站通</span>过<span class="ffa">超</span>链<span class="ffa">接跳</span>转<span class="ffa">代</span>码</span></div><div class="t m0 x2 h18 y51 ff1 fs4 fc0 sc0 ls0 ws0">2.<span class="ffa">快捷<span class="ff9">导</span>航<span class="ff9">设计</span></span></div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pff" class="pf w0 h0" data-page-no="f"><div class="pc pcf w0 h0"><img class="bi x0 y52 w1 h19" alt="" src="bgf.png"/><div class="c x1 y1 w0 h2"><div class="t m0 x2 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0">                                                              <span class="_ _0"> </span><span class="ff2">实验一</span>  <span class="_ _1"> </span>Web <span class="ff2">网站设计</span>  <span class="ff2">实验报告</span></div></div><div class="c x9 y3 w3 h4"><div class="t m0 x1 h5 y4 ff1 fs0 fc0 sc0 ls0 ws0">15</div></div><div class="t m0 x2 h18 y53 ff1 fs4 fc0 sc0 ls0 ws0">3.<span class="ffa">搜索框的<span class="ff9">设计</span></span></div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf10" class="pf w0 h0" data-page-no="10"><div class="pc pc10 w0 h0"><img class="bi x0 y54 w1 h1a" alt="" src="bg10.png"/><div class="c x1 y1 w0 h2"><div class="t m0 x2 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0">                                                              <span class="_ _0"> </span><span class="ff2">实验一</span>  <span class="_ _1"> </span>Web <span class="ff2">网站设计</span>  <span class="ff2">实验报告</span></div></div><div class="c x9 y3 w3 h4"><div class="t m0 x1 h5 y4 ff1 fs0 fc0 sc0 ls0 ws0">16</div></div><div class="t m0 x2 h17 y55 ff1 fs7 fc0 sc0 ls0 ws0">4.<span class="ff9">伪<span class="ffa">元素</span>实现<span class="ffa">精</span>灵图</span></div><div class="t m0 x2 h1b y56 ff1 fs6 fc0 sc0 ls0 ws0">5.<span class="ffa">底部文字</span></div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf11" class="pf w0 h0" data-page-no="11"><div class="pc pc11 w0 h0"><img class="bi x0 y57 w1 h1c" alt="" src="bg11.png"/><div class="c x1 y1 w0 h2"><div class="t m0 x2 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0">                                                              <span class="_ _0"> </span><span class="ff2">实验一</span>  <span class="_ _1"> </span>Web <span class="ff2">网站设计</span>  <span class="ff2">实验报告</span></div></div><div class="c x9 y3 w3 h4"><div class="t m0 x1 h5 y4 ff1 fs0 fc0 sc0 ls0 ws0">17</div></div><div class="t m0 x2 h1b y58 ff1 fs6 fc0 sc0 ls0 ws0">6.<span class="ff9">侧导<span class="ffa">航</span></span></div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf12" class="pf w0 h0" data-page-no="12"><div class="pc pc12 w0 h0"><img class="bi x0 y59 w1 h1d" alt="" src="bg12.png"/><div class="c x1 y1 w0 h2"><div class="t m0 x2 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0">                                                              <span class="_ _0"> </span><span class="ff2">实验一</span>  <span class="_ _1"> </span>Web <span class="ff2">网站设计</span>  <span class="ff2">实验报告</span></div></div><div class="c x9 y3 w3 h4"><div class="t m0 x1 h5 y4 ff1 fs0 fc0 sc0 ls0 ws0">18</div></div><div class="t m0 x2 h1b y5a ff1 fs6 fc0 sc0 ls0 ws0">7.<span class="ff9">轮<span class="ffa">播</span>图</span></div><div class="t m0 x2 h1e y5b ff2 fs6 fc0 sc0 ls0 ws0">新鲜好物</div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf13" class="pf w0 h0" data-page-no="13"><div class="pc pc13 w0 h0"><img class="bi x0 y5c w1 h1f" alt="" src="bg13.png"/><div class="c x1 y1 w0 h2"><div class="t m0 x2 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0">                                                              <span class="_ _0"> </span><span class="ff2">实验一</span>  <span class="_ _1"> </span>Web <span class="ff2">网站设计</span>  <span class="ff2">实验报告</span></div></div><div class="c x9 y3 w3 h4"><div class="t m0 x1 h5 y4 ff1 fs0 fc0 sc0 ls0 ws0">19</div></div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf14" class="pf w0 h0" data-page-no="14"><div class="pc pc14 w0 h0"><img class="bi x0 y5d w1 h20" alt="" src="bg14.png"/><div class="c x1 y1 w0 h2"><div class="t m0 x2 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0">                                                              <span class="_ _0"> </span><span class="ff2">实验一</span>  <span class="_ _1"> </span>Web <span class="ff2">网站设计</span>  <span class="ff2">实验报告</span></div></div><div class="c x9 y3 w3 h4"><div class="t m0 x1 h5 y4 ff1 fs0 fc0 sc0 ls0 ws0">20</div></div><div class="t m0 x2 hc y5e ff5 fs5 fc0 sc0 ls0 ws0">七、收获、体会、意见和建议</div><div class="t m0 x8 h1e y5f ff2 fs6 fc0 sc0 ls0 ws0">本次实验中，<span class="_ _e"></span>在自主学习了<span class="_ _10"> </span><span class="ff1">html </span>和<span class="_ _10"> </span><span class="ff1">css </span>相关知识点后，<span class="_ _e"></span>我第一次尝试设计了</div><div class="t m0 x2 h1e y60 ff2 fs6 fc0 sc0 ls0 ws0">网页，<span class="_ _11"></span>熟悉了设计一个网页的详细流程，<span class="_ _11"></span>以及各种网页的布局，<span class="_ _11"></span>以及许多网页元</div><div class="t m0 x2 h1e y61 ff2 fs6 fc0 sc0 ls0 ws0">素的实现。比如导航栏，<span class="_ _12"></span><span class="ff1">banner<span class="ff2">，轮播图，<span class="_ _12"></span>图片与文字的展示方式。精灵图，<span class="_ _12"></span>浮</span></span></div><div class="t m0 x2 h1e y62 ff2 fs6 fc0 sc0 ls0 ws0">动，定位和装饰，以及一部分美观的样式实现。成功的完成了第一个网页设计。</div><div class="t m0 x8 h1e y63 ff2 fs6 fc0 sc0 ls0 ws0">不足的是，<span class="_ _e"></span>还不能够实现足够好交互式设计，<span class="_ _c"></span>要继续学习<span class="_ _10"> </span><span class="ff1">javascript</span>。<span class="_ _e"></span>以及不</div><div class="t m0 x2 h1e y64 ff2 fs6 fc0 sc0 ls0 ws0">够熟练。</div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+</div>
+<div class="loading-indicator">
+<img alt="" src="pdf2htmlEX-64x64.png"/>
+</div>
+</body>
+</html>

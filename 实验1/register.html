@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">  
+    <title>register</title>
+    <meta name="description" content="" />
+    <meta name="Keywords" content="" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="css/register.css">
+</head>
+
+<body class="bg">
+    <!-- 快捷导航 -->
+    <div class = "shortcut"> 
+        <div class="wrapper">
+            <ul>
+                <li><a href="./index.html">首页</a></li>
+                <li><a href="./login.html">登录</a></li>
+                <li><a href="./register.html">注册</a></li>
+                <li><a href="./cart.html">购物车</a></li>
+                <li><a href="./findmore.html">个人中心</a></li>
+                <li><a href="./about_us.html">关于我们</a></li>
+                <li><a href="./web_report/report.html">实验一报告</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 内容 -->
+    <div class="wrapper ">
+        <div class="form0 bg2">
+            <div>
+                <!--    form是表单域，reset的区域-->
+                <form action="url">
+                    <span>注册账号：</span><input type="text" class="shuru" placeholder="邮箱/用户名/手机号"  >
+                    <br>
+                    <span>输入密码：</span><input type="password" class="shuru" placeholder="请输入密码" >
+                    <br>
+                    <span>确认密码：</span><input type="password" class="shuru" placeholder="请再输入密码" >
+                    <br>
+                    <span>性别：</span><input type="radio" name="sex" checked id="nan"> <label for="nan">男</label>  
+                            <input type="radio" name="sex"  id="nv"> <label for="nv">女</label>  
+                    <!--         <label>< input type="radio"  name="sex" >女</label>  报错-->
+                    <!--        单选框和标签联动-->
+                    <br>
+                    <span>上传头像：</span><input type="file" multiple> 
+                        <br>
+                        <!-- 下拉栏 -->
+                        <span>所在地：</span><select name="" id="">
+                            <option>北京</option>
+                            <option >上海</option>
+                            <option selected>杭州</option>  
+                        </select>
+                        <br>
+                    <!-- 文本框
+                    <textarea name="luo" id="001" cols="35" rows="10"></textarea> -->
+                    
+                    <input type="submit" value="立即注册">
+                    
+                    <!-- <input type="button" value="按钮"> -->
+                </form>
+            </div>
+        </div>
+
+    </div> 
+
+
+</body>
+</html>

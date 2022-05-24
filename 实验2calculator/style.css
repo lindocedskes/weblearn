@@ -1,0 +1,94 @@
+body{
+	background-image: url(./bg220406.JPG);
+}
+#container{
+     width: 1200px;
+     height: 750px;
+     /* background-color: pink; */
+     margin: auto;
+}
+#calculator{
+    position: relative;
+    width: 320px;
+    height: 580px;
+    margin: auto;
+    top: 90px;
+    background-color: #eaedef;
+    border-radius: 5px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#result{
+	height: 100px;
+    background-color: rgb(246, 244, 244);
+    /* background-color: pink; */
+}
+#history{
+    /* 靠右 */
+	text-align: right;
+	height: 20px;
+	margin: 0 20px;
+	padding-top: 20px;
+	font-size: 15px;
+	color: #919191;
+}
+#output{
+    /* 靠右 */
+	text-align: right;
+    height: 60px;
+	margin: 10px 20px;
+	font-size: 30px;
+}
+#keyboard{
+	height: 500px;
+    background-color: blue;
+}
+.operator, .number{
+	width: 70px;
+	height: 70px;
+	margin: 5px;
+	float: left;
+	border-radius: 50%;
+	border-width: 0;
+	font-weight: bold;
+	font-size: 15px;
+}
+.number{
+	background-color: #d6d9db;
+}
+.number, .operator{
+    /* 指针变小手 */
+	cursor: pointer; 
+}
+.operator:active, .number:active{
+    /* 按下字体变小 */
+	font-size: 13px;
+}
+button:nth-child(4){
+	font-size: 20px;
+	background-color: #20b2aa;
+}
+button:nth-child(8){
+	font-size: 20px;
+	background-color: #ffa500;
+}
+button:nth-child(12){
+	font-size: 20px;
+	background-color: #f08080;
+}
+button:nth-child(16){
+	font-size: 20px;
+	background-color: #7d93e0;
+}
+button:nth-child(20){
+	font-size: 20px;
+	background-color: #9477af;
+}
+button:nth-child(24){
+	font-size: 20px;
+	background-color: #969696;
+}
+
+#explian{
+	font-size: 7px;
+	color: rgb(117, 246, 4);
+}

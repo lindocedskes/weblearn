@@ -1,0 +1,215 @@
+/* 各个页面相同的样式 wrapper：包装*/
+/* 定义版心类 */
+.wrapper{
+    width: 1240px;
+    margin:0 auto;
+}
+
+/* 快捷导航  shortcut n/v 快捷方式*/
+.shortcut{
+    height: 52px;
+    background-color: rgb(17, 16, 16);
+}
+/* 导航的版心 */
+.shortcut .wrapper{
+    height:52px;
+    /* background-color: rgb(238, 130, 211); */
+}
+.shortcut .wrapper ul{
+    float: right;
+}
+.shortcut .wrapper li{
+    float:left;
+    line-height: 52px;
+}
+.shortcut .wrapper a{
+    padding:0 16px;
+    /* 右竖线 */
+    border-right: 1px solid #666;
+    font-size: 14px;
+    color: #e7e7e7;
+}
+/* 精灵图 */
+.shortcut .wrapper a span{
+    display: inline-block;
+    width:11px;
+    
+
+}
+
+/* 头部 */
+.header {
+    margin: 30px auto;
+    height: 70px;
+    /* background-color: pink; */
+}
+.logo{
+    float:left;
+    width: 207px;
+    height: 70px;
+    /* background-color: pink; */
+}
+/* logo搜索引擎优化 */
+.logo h1{
+    width: 207px;
+    height:70px;
+}
+.logo h1 a{
+    display: block;
+    height: 70px;
+    width: 207px;
+    background-image: url(../images/logo.png);
+    /* 图片大小适配 */
+    background-size: contain;
+    /* 字隐藏 */
+    font-size: 0;
+}
+
+/* 小导航 */
+.nav{
+    float:left;
+    margin-left: 40px;
+    height:70px;
+    /* background-color: pink; */
+}
+.nav li{
+    float: left;
+    margin-right: 48px;
+    line-height: 70px;
+}
+.nav li a{
+    padding-bottom: 7px;
+}
+.nav li a:hover{
+    color: #27ba9b;
+    border-bottom:1px solid #27ba9b;
+
+}
+
+/* 搜索框 */
+.search{
+    position: relative;
+    float:left;
+    margin-top: 24px;
+    margin-left:34px;
+    width: 172px;
+    height: 30px;
+    /* background-color: green; */
+    border-bottom: 2px solid #e7e7e7;
+}
+.search input{
+    padding-left: 30px;
+    width:172px;
+    height: 28px;
+}
+.search input::placeholder{
+    font-size: 14px;
+    color:#ccc;
+}
+.search span{
+    position: absolute;
+    left: 2px;
+    top: 0;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    /* background-color: pink; */
+    background-image: url(../images/sprites.png);
+    background-position: -79px -69px;
+}
+
+/* 购物车 精灵图*/
+.car{
+    position: relative;
+    float: left;
+    margin-top: 28px;
+    margin-left: 15px;
+    width:23px;
+    height:23px;
+    /* background-color: pink; */
+    background-image: url(../images/sprites.png);
+    background-position: -119px -69px;
+}
+/* 小红点 */
+.car span{
+    position: absolute;
+    right: -13px;
+    top:-6px;
+    width: 20px;
+    height: 15px;
+    background-color: #e26237;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #fff;
+    text-align:center;
+    line-height: 15px;
+}
+
+/* 底部  */
+.footer{
+    height: 342px;
+    background-color: #333;
+}
+.footer .wrapper{
+    /* 重新定义版心 */
+    width: 1393;
+}
+.footer .top{
+    padding-top: 59px;
+    padding-left: 135px;
+    height:175px;
+    border-bottom: 3px solid #434343;
+    
+}
+.footer .top li{
+    position: relative;
+    float: left;
+    margin-right: 180px;
+    width:195px;
+    height: 58px;
+    /* background-color: pink; */
+    
+}
+/* 单独使最后一个外边距没有 */
+.footer .top li:last-child{
+    margin-right: 0;
+}
+/* 通过伪类实现精灵图  模式默认行内 */
+.footer .top li::before{
+    position:absolute;
+    left: 0;
+    top: 0;
+    content:'';
+    width:58px;
+    height: 58px;
+    background-image: url(../images/sprites.png);
+    vertical-align:middle;
+}
+.footer .top li span{
+    display: inline-block;
+    margin-top: 6px;
+    margin-left: 50px;
+    font-size:28px;
+    color: #fff;
+}
+/* 第二个li里面的before添加背景图位置属性 */
+.footer .top li:nth-child(2)::before{
+    background-position: -64px 0;
+}
+.footer .top li:nth-child(3)::before{
+    background-position: -130px 0;
+}
+/* 底部文字 */
+.footer .bottom{
+    padding-top:40px;
+    font-size: 14px;
+    color: #999;
+    text-align: center;
+}
+.footer a{
+    font-size: 14px;
+    color: #999;
+}
+.footer .bottom p{
+    margin-bottom: 20px;
+}

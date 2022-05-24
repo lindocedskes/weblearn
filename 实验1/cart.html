@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/cart.css">
+</head>
+<body>
+    <!-- 快捷导航 -->
+    <div class = "shortcut"> 
+        <div class="wrapper">
+            <ul>
+                <li><a href="./index.html">首页</a></li>
+                <li><a href="./login.html">登录</a></li>
+                <li><a href="./register.html">注册</a></li>
+                <li><a href="./cart.html">购物车</a></li>
+                <li><a href="./findmore.html">个人中心</a></li>
+                <li><a href="./about_us.html">关于我们</a></li>
+                <li><a href="./web_report/report.html">实验一报告</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 购物车内容 -->
+    <div class="bg">
+        <div class="level2">
+            <div class="level3">
+                <br>
+                <h1>购物车 <small class="pull-right"> 4 项在购物车中 </small></h1>
+                <hr />	
+                <!-- 表格 -->
+                 <table class="table table-bordered table-condensed">
+                    <thead>
+                    <tr>
+                      <th>物品</th>
+                      <th>描述</th>
+                      <th>店铺</th>
+                      <th>确认购买</th>
+                      <th>单价</th>
+                      <th>数量 </th>
+                      <th>金额</th>
+                    </tr>
+                    </thead>
+                    <tbody>                           
+                        <tr>
+                            <td><img width="100" src="./uploads/clothes_goods_1.jpg" alt=""></td>
+                            <td>Items name here<br>Carate : 22<br>Model : n/a</td>
+                            <td> - </td>
+                            <td><span ><input type="checkbox" class="checkbox0" checked></span> </td>
+                            <td>50.00</td>
+                            <td>
+                                <input class="span1" style="max-width:30px" placeholder="1" id="appendedInputButtons" size="14" type="text" value="2">     
+                                <button class="jian" type="button">-</button><button class="add" type="button"> + </button>
+                            </td>
+                            <td>100.00</td>
+                        </tr>
+                        <tr>
+                            <td><img width="100" src="./uploads/fresh_goods_5.jpg" alt=""></td>
+                            <td>Item names and brief details<br>Carate:24 <br>Model:HBK24</td>
+                            <td> - </td>
+                            <td><span ><input type="checkbox" class="checkbox0" checked></span> </td>
+                            <td>348.42</td>
+                            <td>
+                                <input class="span1" style="max-width:34px" placeholder="1" size="16" type="text">
+                                <button class="jian" type="button">-</button><button class="add" type="button"> + </button>
+                            </td>
+                            <td>348.42</td>
+                        </tr>
+                        <tr>
+                        <tr>
+                            <td><img width="100" src="./uploads/clothes_goods_1.jpg" alt=""></td>
+                            <td>Items name here<br>Carate : 22<br>Model : n/a</td>
+                            <td> - </td>
+                            <td><span ><input type="checkbox" class="checkbox0" checked></span> </td>
+                            <td>50.00</td>
+                            <td>
+                                <input class="span1" style="max-width:30px" placeholder="1" id="appendedInputButtons" size="14" type="text" value="2">
+                                <button class="jian" type="button">-</button><button class="add" type="button"> + </button>
+                            </td>
+                            <td>100.00</td>
+                        </tr>
+                        <tr>
+                            <td><img width="100" src="./uploads/clothes_goods_1.jpg" alt=""></td>
+                            <td>Items name here<br>Carate : 22<br>Model : n/a</td>
+                            <td> - </td>
+                            <td><span ><input type="checkbox" class="checkbox0" checked></span> </td>
+                            <td>50.00</td>
+                            <td>
+                                <input class="span1" style="max-width:30px" placeholder="1" id="appendedInputButtons" size="14" type="text" value="2">
+                                <button class="jian" type="button">-</button><button class="add" type="button"> + </button>
+                            </td>
+                            <td>100.00</td>
+                        </tr>
+
+                        <td colspan="6" >合计:	</td>
+                        <td> 448.42</td>
+                        </tr>  
+                                             
+                     </tbody>
+                </table>
+                <br/>
+
+                <a href="" class="shopBtn ">继续购物</a>
+                <a href="" class="shopBtn pull-right">结算 </a>
+            </div>
+        </div>
+    </div>
+    <script src="./js/cart.js"></script>
+
+    
+</body>
+</html>

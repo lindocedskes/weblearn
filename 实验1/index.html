@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="xiaowangzhang">
+    <meta name="keywords" content="luo">
+    <!-- ico -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>羅</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/jquery-1.8.3.js"></script>
+    <script src="./js/jquery-realTimeSimulator-plugin.js"></script>
+    <script>
+        $(document).ready(function(e){
+             // $.fn.showTime("realTime");
+             $.fn.showTime("realTime2","年","月","日","时","分","秒","chinese");
+             // $.fn.showTime("realTime3","年","月","日","时","分","秒","english");
+ //            $.fn.showTime("realTime2","年",null,"日","时","分","秒","english");
+ //            $.fn.showTime("realTime2",null,null,"日","时","分","秒","english");
+        });
+     </script>
+</head>
+<body class="bg">
+    <!-- 快捷导航 -->
+    <div class = "shortcut"> 
+        <div class="wrapper">
+            <ul>
+                <li><a href="./index.html">首页</a></li>
+                <li><a href="./login.html">登录</a></li>
+                <li><a href="./register.html">注册</a></li>
+                <li><a href="./cart.html">购物车</a></li>
+                <li><a href="./findmore.html">动漫中心</a></li>
+                <li><a href="./about_us.html">关于我们</a></li>
+                <li><a href="./web_report/report.html">实验一报告</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 头部 -->
+    <div class="header wrapper">
+        <div class="logo">
+            <h1><a href="">小兔鲜儿</a></h1>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="">冰箱</a></li>
+                <li><a href="">彩电</a></li>
+                <li><a href="">空调</a></li>
+                <li><a href="">洗衣机</a></li>
+                <li><a href="">吹风机</a></li>
+                <li><a href="">战斗机</a></li>
+            </ul>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="搜一搜">
+            <!-- 放大镜 -->
+            <span></span>
+        </div>
+        <div class="car">
+            <!-- 购物车的数量 -->
+            <!-- <span>2</span> -->
+        </div>
+    </div>
+
+    <!-- banner -->
+    <div class="banner">
+        <div class="wrapper">
+            <ul class="picture">
+                <li></li>
+            </ul>
+            <!-- 侧导航 -->
+            <div class="aside">
+                <ul><li><a href="">生鲜<span>水果 蔬菜</span></a></li></ul>
+                <ul><li><a href="">生鲜<span>水果 蔬菜</span></a></li></ul>
+                <ul><li><a href="">生鲜<span>水果 蔬菜</span></a></li></ul>
+                <ul><li><a href="">生鲜<span>水果 蔬菜</span></a></li></ul>
+                <ul><li><a href="">生鲜<span>水果 蔬菜</span></a></li></ul>
+            </div>
+            <!-- 轮播图箭头 -->
+            <!-- 上一张图 -->
+            <a href="#" class="prev"></a>
+            <!-- 下一张图 -->
+            <a href="#" class="next"></a>
+            
+            <!-- 圆点 ：当前状态 current/active-->
+            <!-- 配合js 找到用户点击的圆点变白 -->
+            <ol>
+                <li class="current"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ol>
+        </div>
+    </div>
+    <!-- 新鲜好物     -->
+    <div class="goods wrapper">
+        <!-- hd header 头部 -->
+        <div class="hd">
+            <h2>新鲜好物<span>新鲜出炉 品质靠谱</span></h2>
+            <a href="./findmore.html">查看全部</a>
+        </div>     
+        <!-- body 身体，内容 -->
+        <div class="bd clearfix">
+            <ul>
+                <li>
+                    <a href="#">
+                    <img src="./uploads/clothes_goods_1.jpg" alt="">
+                    <h3>鞋子</h3>
+                    <div>¥<span>9999</span></div>
+                    <!--b 按列写 -->
+                    <b>新品</b>
+                    <!-- <button class="addcart" type="button">添加到购物车</button> -->
+                    <input type="button"value="加入购物车" onClick="JavaScript: addItem( 'DISNEY相框', 19);">
+                     </a>
+                </li>
+                <li>
+                    <a href="#">
+                    <img src="./uploads/fresh_goods_5.jpg" alt="">
+                    <h3>火龙果</h3>
+                    <div>¥<span>9999</span></div>
+                    <b>新品</b>
+                    <button class="addcart" type="button">添加到购物车</button>
+                     </a>
+                </li>
+                <li>
+                    <a href="#">
+                    <img src="./uploads/kitchen_goods_1.jpg" alt="">
+                    <h3>餐具</h3>
+                    <div>¥<span>9999</span></div>
+                    <b>新品</b>
+                    <button class="addcart" type="button">添加到购物车</button>
+                     </a>
+                </li>
+                <li>
+                    <a href="#">
+                    <img src="./uploads/seckill_goods_1.jpg" alt="">
+                    <h3>耳机</h3>
+                    <div>¥<span>9999</span></div>
+                    <b>新品</b>
+                    <button class="addcart" type="button">添加到购物车</button>
+                     </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+
+    <!-- 底部 -->
+    <div class="footer">
+        <div class="wrapper">
+            <div class="top">
+                <ui>
+                    <li> 
+                        <!-- 通过伪类实现精灵图 -->
+                        <span>价格亲民</span>
+                    </li>
+                    <li><span>品质新鲜</span></li>
+                    <li><span>物流快捷</span></li>
+                </ui>
+            </div>
+            <div class="bottom">
+                <p>
+                    <a href="">关于我们</a> ｜
+                    <a href="">关于我们</a> ｜
+                    <a href="">关于我们</a> ｜
+                    <a href="">关于我们</a> ｜
+                    <a href="">关于我们</a> 
+                </p>
+                <p>
+                    CopyRight @ 不良人
+                    <br>
+                    <span id="realTime2" style="font-size: 16px; color: pink;"></span>
+                </p>
+                
+            </div>
+        </div>
+     </div>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button"value="加入购物车" onClick="JavaScript: addItem( 'DISNEY相框', 19);">
+    <script src="./cart2.js"></script>
+    <input type="button"value="查看购物车" onClick="JavaScript: document.location='./cart.html';">
+    
+    <script src="./cart2.js"></script>
+    <b style="font-size:6;">查看购物车</b>
+    <form>
+    <table width="100%" style="border: 2;">
+    <script language="JavaScript">
+    total=0;
+    console.log(document.cookie);
+    for (var i = 1 ; i <=parseInt(getCookieValue("items")) ; i++ ) {
+         if(getItemName( "item" + i ) != ""&&  getItemPrice( "item" + i ) !=undefined ) 
+            document.write("<tr><td>" );
+            document.write( getItemName("item" + i ) + "</td><td>" );
+           document.write( "RMB" + getItemPrice( "item" + i ) +"元</td><td>" );
+           document.write( "<input type='button' value='移除' " +"onClick='JavaScript: removeItem(\"item" + i + "\" );'>" );
+            document.write("</td></tr>" );
+            total += parseFloat( getItemPrice("item" + i ) );
+         }
+    document.write('<tr><td><b>合计</b></td>');
+    document.write('<td colspan="2"align="left">RMB'+total+'元</td></tr>');
+    </script>
+    <tr><td colspan="3" style="align-content: center; ">
+    <input type="button"value="继续购物"
+                 onClick="JavaScript: document.location='./shopping.html';">
+    </td></tr>
+    </table>
+    </form>
+    <script src="./cart2.js"></script>
+    </body>    
+</html>

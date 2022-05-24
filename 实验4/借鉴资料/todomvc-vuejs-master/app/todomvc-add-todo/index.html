@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html  data-framework="vue">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue.js-todomvc</title>
+	<link rel="stylesheet" href="libs/index.css">
+</head>
+<body>
+	<section class="todoapp">
+		<header class="header">
+			<h1>todos</h1>
+			<input 
+				class="new-todo" autofocus autocomplete="off" placeholder="What needs to be done?" 
+				v-model="newTodo"
+				@keyup.enter="addTodo"
+				>
+		</header>
+		<section class="main">
+			<input class="toggle-all" type="checkbox">
+			<ul class="todo-list">
+				<li class="todo"
+					v-for="todo in filterTodos">
+					<div class="view">
+						<input class="toggle" type="checkbox">
+						<label>{{todo.title}}</label>
+						<button class="destroy" ></button>
+					</div>
+					<input class="edit" type="text">
+				</li>
+			</ul>
+		</section>
+		<footer class="footer" v-show="todos.length">
+			<span class="todo-count">
+				<strong v-text="remaining"></strong>&nbsp;{{remaining | pluralize 'item'}} left
+			</span>
+			<ul class="filters">
+				<li><a href="#/all" :class="{selected: visibility == 'all'}">All</a></li>
+				<li><a href="#/active" :class="{selected: visibility == 'active'}">Active</a></li>
+				<li><a href="#/completed" :class="{selected: visibility == 'completed'}">Completed</a></li>
+			</ul>
+			<button class="clear-completed" v-show="todos.length > remaining">
+				Clear completed
+			</button>
+		</footer>
+	</section>
+	<footer class="info">
+		<p>Double-click to edit a todo</p>
+		<p>Written by <a href="http://evanyou.me">Evan You</a></p>
+		<p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
+	</footer>
+	<script src="libs/vue.js"></script>
+	<script src="js/store.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>

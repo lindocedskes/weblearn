@@ -1,0 +1,24 @@
+1> v-model="var"
+一般用在表单组件与vu实例的双向数据绑定
+
+2> v-on:event="function"
+绑定事件event，然后执行function方法，简写：@event="function"，同时支持按钮修饰符和事件修饰符
+
+3> v-show="bool"
+根据条件展示元素，元素会始终渲染并保持在dom中，v-show是简单的切换元素的display属性
+
+4> v-cloak 
+无表达式，不太明白
+
+5> Vue.js不能检测到下面数组的变化
+   a>直接用索引设置元素，如 vm.items[0] = {}
+   b>修改数组长度，如 vm.items.length = 0
+
+   解决：
+   a> vm.items.$set(0, {})，设置索引为0的元素的值
+   b> vm.items.$remove(item)，删除数组元素
+
+6> v-bind:class="" 绑定属性class
+
+7> v-text="msg"
+绑定文本指令，更新元素的textContent

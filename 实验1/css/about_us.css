@@ -1,0 +1,19 @@
+body{
+    background: url(../images/white_leather.png) repeat 0 0;
+}
+
+.div1{
+    width:620px;
+    float:left;
+    margin-left: 20px;
+}
+
+.div2{
+    float:left;
+    width:200px;
+    margin-left: 20px;
+}
+.row{
+    overflow: hidden;
+    margin-bottom: 200px;
+}
